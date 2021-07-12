@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.gridlayout.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="138dp"
+    tools:layout_editor_absoluteY="237dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_column="0"
+        app:layout_row="0">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="237dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="Username" />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="200dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Enter Name"
+                android:inputType="textPersonName"
+                app:layout_column="1"
+                app:layout_row="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="96dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="70dp"
+                android:text="Password"
+                app:layout_column="0"
+                app:layout_row="0" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="70dp"
+                android:ems="10"
+                android:hint="Enter password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:layout_marginTop="110dp"
+                android:layout_marginLeft="10dp"
+                app:layout_column="0"
+                app:layout_row="0"
+                />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="183dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="110dp"
+                android:ems="10"
+                android:hint="Enter Address"
+                android:inputType="textPostalAddress" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="10dp"
+                app:layout_column="0"
+                app:layout_row="0" />
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="183dp"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="150dp"
+                android:inputType="numberSigned"
+                android:hint="Enter Age" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:layout_marginTop="220dp"
+                android:layout_marginLeft="10dp"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="210dp"
+                android:layout_marginLeft="50dp"
+                android:orientation="vertical">
+                <RadioButton android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="female"
+                    android:onClick="onRadioButtonClicked"
+                    tools:ignore="OnClick" />
+                <RadioButton android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="male"
+                    android:onClick="onRadioButtonClicked"
+                    tools:ignore="OnClick" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="320dp"
+                android:text="DOB"
+                app:layout_column="0"
+                app:layout_row="0"/>
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="320dp"
+                android:onClick="setDate"
+                android:text="Select date" />
+
+            <TextView
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="390dp"
+                android:text="State"
+                app:layout_column="0"
+                app:layout_row="0"
+                />
+            <Spinner
+                android:id="@+id/states"
+                android:layout_width="200dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="390dp" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="480dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="SetAnswer"
+                android:text="Submit"
+                tools:ignore="OnClick"
+                app:layout_column="0"
+                app:layout_row="0"/>
+
+            <TextView
+                android:id="@+id/answer"
+                android:layout_width="266dp"
+                android:layout_height="155dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="420dp"
+                android:layout_marginBottom="50dp"
+                android:ems="10"
+                android:hint="Answer"
+                />
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+</androidx.gridlayout.widget.GridLayout>
